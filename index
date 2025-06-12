@@ -3,97 +3,91 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dark Theme Webpage</title>
+  <title>Elyraa Designs</title>
   <style>
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: 'Segoe UI', sans-serif;
     }
 
     body {
-      background: url('your-background-image.jpg') no-repeat center center fixed;
+      background: url('background-space.jpg') no-repeat center center fixed;
       background-size: cover;
-      backdrop-filter: blur(4px);
-      color: white;
-    }
-
-    .container {
+      color: #fff;
+      min-height: 100vh;
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 40px 20px;
+      padding: 2rem;
     }
 
     .title {
-      font-size: 32px;
       background: rgba(0, 0, 0, 0.6);
-      padding: 10px 30px;
-      border-radius: 20px;
-      margin-bottom: 30px;
+      padding: 1rem 2rem;
+      border-radius: 1rem;
+      margin-bottom: 2rem;
+      font-size: 2rem;
+      font-weight: bold;
+      text-align: center;
+      letter-spacing: 2px;
+      backdrop-filter: blur(10px);
     }
 
     .grid {
-      display: flex;
-      gap: 30px;
-      flex-wrap: wrap;
-      justify-content: center;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 2rem;
+      width: 100%;
+      max-width: 1000px;
     }
 
     .card {
-      width: 140px;
-      height: 140px;
-      background: rgba(0, 0, 0, 0.4);
-      border-radius: 30px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
-      transition: 0.3s ease;
-      backdrop-filter: blur(6px);
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 1.5rem;
+      padding: 2rem;
+      text-align: center;
+      backdrop-filter: blur(15px);
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease;
       cursor: pointer;
     }
 
     .card:hover {
-      transform: translateY(-8px);
-      background: rgba(255, 255, 255, 0.1);
+      transform: scale(1.05);
     }
 
     .card img {
-      width: 40px;
-      margin-bottom: 10px;
-      filter: invert(1);
+      height: 50px;
+      margin-bottom: 1rem;
+      filter: brightness(0) invert(1);
     }
 
     .label {
-      font-size: 14px;
-      text-align: center;
-      color: #ccc;
+      font-size: 1.1rem;
+      margin-top: 0.5rem;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <div class="title">CONTENT</div>
-    <div class="grid">
-      <div class="card">
-        <img src="icon-headset.png" alt="Intro Icon">
-        <div class="label">INTRODUCTION</div>
-      </div>
-      <div class="card">
-        <img src="icon-chart.png" alt="Chart Icon">
-        <div class="label">OVERVIEW</div>
-      </div>
-      <div class="card">
-        <img src="icon-shield.png" alt="Security Icon">
-        <div class="label">SECURITY</div>
-      </div>
-      <div class="card">
-        <img src="icon-strategy.png" alt="Strategy Icon">
-        <div class="label">STRATEGY</div>
-      </div>
+  <div class="title">CONTENT</div>
+  <div class="grid">
+    <div class="card">
+      <img src="icon-headset.png" alt="Introduction" />
+      <div class="label">Introduction</div>
+    </div>
+    <div class="card">
+      <img src="icon-network.png" alt="Network" />
+      <div class="label">Networking</div>
+    </div>
+    <div class="card">
+      <img src="icon-security.png" alt="Security" />
+      <div class="label">Security</div>
+    </div>
+    <div class="card">
+      <img src="icon-strategy.png" alt="Strategy" />
+      <div class="label">Strategy</div>
     </div>
   </div>
 </body>
