@@ -9,7 +9,7 @@
       margin: 0;
       padding: 0;
       font-family: 'Segoe UI', sans-serif;
-      background: #0e0e0e; /* DARK BACKGROUND */
+      background: #000000; /* DARK BACKGROUND */
       color: white;
       display: flex;
       flex-direction: column;
