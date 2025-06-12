@@ -3,91 +3,84 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Elyraa Designs</title>
+  <title>Glassmorphic Dashboard</title>
   <style>
-    * {
-      box-sizing: border-box;
+    body {
       margin: 0;
-      padding: 0;
       font-family: 'Segoe UI', sans-serif;
+      background: url('https://wallpapercave.com/wp/wp5128415.jpg') no-repeat center center/cover;
+      color: white;
+      overflow: hidden;
     }
 
-    body {
-      background: url('background-space.jpg') no-repeat center center fixed;
-      background-size: cover;
-      color: #fff;
-      min-height: 100vh;
+    .container {
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 2rem;
+      justify-content: center;
+      height: 100vh;
+      backdrop-filter: blur(4px);
     }
 
-    .title {
-      background: rgba(0, 0, 0, 0.6);
-      padding: 1rem 2rem;
-      border-radius: 1rem;
-      margin-bottom: 2rem;
+    h1 {
       font-size: 2rem;
-      font-weight: bold;
-      text-align: center;
-      letter-spacing: 2px;
-      backdrop-filter: blur(10px);
+      margin-bottom: 30px;
+      letter-spacing: 4px;
+      background: rgba(0, 0, 0, 0.6);
+      padding: 10px 20px;
+      border-radius: 12px;
     }
 
     .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 2rem;
-      width: 100%;
-      max-width: 1000px;
+      display: flex;
+      gap: 30px;
     }
 
     .card {
       background: rgba(255, 255, 255, 0.05);
-      border-radius: 1.5rem;
-      padding: 2rem;
+      border-radius: 25px;
+      padding: 40px;
       text-align: center;
-      backdrop-filter: blur(15px);
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-      transition: transform 0.3s ease;
-      cursor: pointer;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+      width: 120px;
+      height: 120px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      transition: 0.3s;
     }
 
     .card:hover {
       transform: scale(1.05);
+      box-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
     }
 
     .card img {
-      height: 50px;
-      margin-bottom: 1rem;
-      filter: brightness(0) invert(1);
-    }
-
-    .label {
-      font-size: 1.1rem;
-      margin-top: 0.5rem;
+      width: 40px;
+      height: 40px;
+      filter: invert(1);
     }
   </style>
 </head>
 <body>
-  <div class="title">CONTENT</div>
-  <div class="grid">
-    <div class="card">
-      <img src="icon-headset.png" alt="Introduction" />
-      <div class="label">Introduction</div>
-    </div>
-    <div class="card">
-      <img src="icon-network.png" alt="Network" />
-      <div class="label">Networking</div>
-    </div>
-    <div class="card">
-      <img src="icon-security.png" alt="Security" />
-      <div class="label">Security</div>
-    </div>
-    <div class="card">
-      <img src="icon-strategy.png" alt="Strategy" />
-      <div class="label">Strategy</div>
+  <div class="container">
+    <h1>CONTENT</h1>
+    <div class="grid">
+      <div class="card">
+        <img src="icon-headset.png" alt="Intro" />
+      </div>
+      <div class="card">
+        <img src="icon-network.png" alt="Network" />
+      </div>
+      <div class="card">
+        <img src="icon-shield.png" alt="Security" />
+      </div>
+      <div class="card">
+        <img src="icon-chess.png" alt="Strategy" />
+      </div>
     </div>
   </div>
 </body>
