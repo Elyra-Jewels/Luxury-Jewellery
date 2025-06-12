@@ -2,46 +2,99 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Elyraa | Men's Gold Chains</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dark Theme Webpage</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: url('your-background-image.jpg') no-repeat center center fixed;
+      background-size: cover;
+      backdrop-filter: blur(4px);
+      color: white;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+    }
+
+    .title {
+      font-size: 32px;
+      background: rgba(0, 0, 0, 0.6);
+      padding: 10px 30px;
+      border-radius: 20px;
+      margin-bottom: 30px;
+    }
+
+    .grid {
+      display: flex;
+      gap: 30px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .card {
+      width: 140px;
+      height: 140px;
+      background: rgba(0, 0, 0, 0.4);
+      border-radius: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+      transition: 0.3s ease;
+      backdrop-filter: blur(6px);
+      cursor: pointer;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .card img {
+      width: 40px;
+      margin-bottom: 10px;
+      filter: invert(1);
+    }
+
+    .label {
+      font-size: 14px;
+      text-align: center;
+      color: #ccc;
+    }
+  </style>
 </head>
-<body class="dark-theme">
-
-  <header class="header">
-    <h1 class="logo">Elyraa Designs</h1>
-    <p class="subtitle">Premium Men's Gold Chains</p>
-  </header>
-
-  <main class="container">
-    <!-- Product Card 1 -->
-    <div class="card">
-      <img src="your-image-url-1.jpg" alt="Cuban Chain" class="product-img">
-      <div class="card-content">
-        <h2 class="product-title">Cuban Link Chain</h2>
-        <p class="product-desc">Bold, heavy 22K Cuban gold chain for men.</p>
-        <a href="https://wa.me/919081624492" class="btn">Buy on WhatsApp</a>
+<body>
+  <div class="container">
+    <div class="title">CONTENT</div>
+    <div class="grid">
+      <div class="card">
+        <img src="icon-headset.png" alt="Intro Icon">
+        <div class="label">INTRODUCTION</div>
+      </div>
+      <div class="card">
+        <img src="icon-chart.png" alt="Chart Icon">
+        <div class="label">OVERVIEW</div>
+      </div>
+      <div class="card">
+        <img src="icon-shield.png" alt="Security Icon">
+        <div class="label">SECURITY</div>
+      </div>
+      <div class="card">
+        <img src="icon-strategy.png" alt="Strategy Icon">
+        <div class="label">STRATEGY</div>
       </div>
     </div>
-
-    <!-- Product Card 2 -->
-    <div class="card">
-      <img src="your-image-url-2.jpg" alt="Dual Gold Chain" class="product-img">
-      <div class="card-content">
-        <h2 class="product-title">Dual Polish Chain</h2>
-        <p class="product-desc">Modern gold + rose gold chain, handcrafted to shine.</p>
-        <a href="https://wa.me/919081624492" class="btn">Buy on WhatsApp</a>
-      </div>
-    </div>
-  </main>
-
-  <footer class="footer">
-    <p>📞 +91 90816 24492 | ✉️ elyraadreams@gmail.com</p>
-    <div class="socials">
-      <a href="https://instagram.com/elyraa.designs" target="_blank">Instagram</a> |
-      <a href="https://wa.me/919081624492" target="_blank">WhatsApp</a>
-    </div>
-  </footer>
-
+  </div>
 </body>
 </html>
