@@ -2,128 +2,93 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Elyraa Designs | Men's Gold Chains</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Elyraa Designs</title>
   <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
+    * {
+      box-sizing: border-box;
       margin: 0;
-      background: #f5f5f5;
-      color: #333;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
     }
 
-    header {
-      background-color: #111;
+    body {
+      background: url('background-space.jpg') no-repeat center center fixed;
+      background-size: cover;
       color: #fff;
-      padding: 1rem;
-      text-align: center;
-    }
-
-    .container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 1.5rem;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       padding: 2rem;
     }
 
+    .title {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 1rem 2rem;
+      border-radius: 1rem;
+      margin-bottom: 2rem;
+      font-size: 2rem;
+      font-weight: bold;
+      text-align: center;
+      letter-spacing: 2px;
+      backdrop-filter: blur(10px);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 2rem;
+      width: 100%;
+      max-width: 1000px;
+    }
+
     .card {
-      background: white;
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      transition: transform 0.3s;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 1.5rem;
+      padding: 2rem;
+      text-align: center;
+      backdrop-filter: blur(15px);
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease;
+      cursor: pointer;
     }
 
     .card:hover {
-      transform: translateY(-5px);
+      transform: scale(1.05);
     }
 
     .card img {
-      width: 100%;
-      height: auto;
-      object-fit: cover;
+      height: 50px;
+      margin-bottom: 1rem;
+      filter: brightness(0) invert(1);
     }
 
-    .card-body {
-      padding: 1rem;
-    }
-
-    .card-title {
-      font-size: 1.2rem;
-      margin: 0 0 0.5rem;
-    }
-
-    .card-desc {
-      font-size: 0.95rem;
-      color: #666;
-    }
-
-    footer {
-      text-align: center;
-      padding: 1rem;
-      background: #111;
-      color: white;
-    }
-
-    .btn {
-      display: inline-block;
-      margin-top: 1rem;
-      padding: 0.5rem 1rem;
-      background: gold;
-      color: #111;
-      text-decoration: none;
-      border-radius: 5px;
-    }
-
-    .socials {
+    .label {
+      font-size: 1.1rem;
       margin-top: 0.5rem;
-    }
-
-    .socials a {
-      color: gold;
-      margin: 0 0.5rem;
-      text-decoration: none;
     }
   </style>
 </head>
 <body>
-
-  <header>
-    <h1>Elyraa Designs</h1>
-    <p>Men’s Gold Chains Collection</p>
-  </header>
-
-  <div class="container">
-    <!-- Product 1 -->
+  <div class="title">CONTENT</div>
+  <div class="grid">
     <div class="card">
-      <img src="your-image-url-1.jpg" alt="Cuban Gold Chain" />
-      <div class="card-body">
-        <h2 class="card-title">Cuban Link Chain</h2>
-        <p class="card-desc">Classic 22K gold chain – bold and timeless.</p>
-        <a href="https://wa.me/919081624492" class="btn">Order Now</a>
-      </div>
+      <img src="icon-headset.png" alt="Introduction" />
+      <div class="label">Introduction</div>
     </div>
-
-    <!-- Product 2 -->
     <div class="card">
-      <img src="your-image-url-2.jpg" alt="Dual Polish Chain" />
-      <div class="card-body">
-        <h2 class="card-title">Dual Polish Chain</h2>
-        <p class="card-desc">Gold & Rose Gold fusion – shine in two tones.</p>
-        <a href="https://wa.me/919081624492" class="btn">Order Now</a>
-      </div>
+      <img src="icon-network.png" alt="Network" />
+      <div class="label">Networking</div>
     </div>
-
-    <!-- Add more product cards as needed -->
+    <div class="card">
+      <img src="icon-security.png" alt="Security" />
+      <div class="label">Security</div>
+    </div>
+    <div class="card">
+      <img src="icon-strategy.png" alt="Strategy" />
+      <div class="label">Strategy</div>
+    </div>
   </div>
-
-  <footer>
-    <p>📞 +91 90816 24492 | ✉️ elyraadreams@gmail.com</p>
-    <div class="socials">
-      <a href="https://www.instagram.com/elyraa.designs" target="_blank">Instagram</a> |
-      <a href="https://wa.me/919081624492" target="_blank">WhatsApp</a>
-    </div>
-  </footer>
-
 </body>
 </html>
