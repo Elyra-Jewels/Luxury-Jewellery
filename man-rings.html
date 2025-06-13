@@ -78,6 +78,7 @@
       border-radius: 15px;
       text-align: center;
       transition: transform 0.3s;
+      cursor: pointer;
     }
 
     .product-image img {
@@ -90,10 +91,18 @@
     }
 
     .inquire-buttons {
-      display: flex;
+      display: none;
+      flex-direction: row;
       justify-content: center;
       gap: 10px;
       margin-top: 10px;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .product-image.show-buttons .inquire-buttons {
+      display: flex;
+      opacity: 1;
     }
 
     .whatsapp-btn, .instagram-btn {
@@ -153,28 +162,32 @@
     <!-- Left: Product Images -->
     <div class="left-column">
       <div class="product-grid">
-        <div class="product-image">
+        <!-- Product 1 -->
+        <div class="product-image" onclick="toggleButtons(this)">
           <img src="m1.jpeg" alt="Ring 1">
           <div class="inquire-buttons">
             <a href="https://wa.me/919081624492" target="_blank" class="whatsapp-btn">WhatsApp</a>
             <a href="https://instagram.com/elyraa.designs" target="_blank" class="instagram-btn">Instagram</a>
           </div>
         </div>
-        <div class="product-image">
+        <!-- Product 2 -->
+        <div class="product-image" onclick="toggleButtons(this)">
           <img src="m2.jpeg" alt="Ring 2">
           <div class="inquire-buttons">
             <a href="https://wa.me/919081624492" target="_blank" class="whatsapp-btn">WhatsApp</a>
             <a href="https://instagram.com/elyraa.designs" target="_blank" class="instagram-btn">Instagram</a>
           </div>
         </div>
-        <div class="product-image">
+        <!-- Product 3 -->
+        <div class="product-image" onclick="toggleButtons(this)">
           <img src="m3.jpeg" alt="Ring 3">
           <div class="inquire-buttons">
             <a href="https://wa.me/919081624492" target="_blank" class="whatsapp-btn">WhatsApp</a>
             <a href="https://instagram.com/elyraa.designs" target="_blank" class="instagram-btn">Instagram</a>
           </div>
         </div>
-        <div class="product-image">
+        <!-- Product 4 -->
+        <div class="product-image" onclick="toggleButtons(this)">
           <img src="m4.jpeg" alt="Ring 4">
           <div class="inquire-buttons">
             <a href="https://wa.me/919081624492" target="_blank" class="whatsapp-btn">WhatsApp</a>
@@ -195,5 +208,10 @@
     </div>
   </div>
 
+  <script>
+    function toggleButtons(element) {
+      element.classList.toggle('show-buttons');
+    }
+  </script>
 </body>
 </html>
