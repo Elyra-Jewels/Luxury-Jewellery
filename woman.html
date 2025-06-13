@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -86,11 +86,44 @@
         height: 130px;
       }
     }
+
+.glass-back-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.glass-back-button img {
+  width: 20px;
+  height: 20px;
+  filter: invert(1);
+}
+
+.glass-back-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.4);
+}
+
+    
   </style>
 </head>
 <body>
 
-  <a href="index.html" class="back-link">← Back to Home</a>
+  <a href="index.html" class="glass-back-button">
+  <img src="home-icon.png" alt="Home" />
+</a>
+
   <h1>WOMAN COLLECTION</h1>
 
   <div class="glass-grid">
