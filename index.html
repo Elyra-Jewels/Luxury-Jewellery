@@ -28,35 +28,15 @@
       }
     }
 
-    .dark-box {
-      background: rgba(0, 0, 0, 0.6);
-      padding: 15px 25px;
-      border-radius: 12px;
-      box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
-      margin: 30px 20px 10px;
-      width: 90%;
-      max-width: 800px;
-    }
-
-    .dark-box h1 {
+    h1, .intro-heading {
+      margin-top: 50px;
       font-size: 2rem;
-      letter-spacing: 2px;
-      margin: 0;
-      text-align: left;
-    }
-
-    .intro-section {
+      letter-spacing: 3px;
       background: rgba(0, 0, 0, 0.6);
-      padding: 20px 25px;
-      border-radius: 12px;
-      box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
-      margin: 10px 20px 50px;
-      width: 90%;
-      max-width: 800px;
-      text-align: left;
-      font-size: 1rem;
-      line-height: 1.6;
-      color: #f0f0f0;
+      padding: 10px 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+      text-align: center;
     }
 
     .glass-grid {
@@ -65,7 +45,7 @@
       flex-wrap: wrap;
       gap: 30px;
       margin-top: 60px;
-      padding-bottom: 40px;
+      padding-bottom: 50px;
     }
 
     .glass-button {
@@ -102,48 +82,39 @@
       text-align: center;
     }
 
-    .intro-section {
-  background: rgba(0, 0, 0, 0.6);
-  padding: 25px 30px;
-  border-left: 6px solid #d4af37; /* Elegant gold accent */
-  border-radius: 10px;
-  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.1);
-  margin: 10px 20px 50px;
-  width: 90%;
-  max-width: 800px;
-  text-align: left;
-  font-size: 1.1rem;
-  line-height: 1.7;
-  color: #f0f0f0;
-  font-style: italic;
-  animation: fadeInUp 1s ease-out both;
-}
+    .intro-box {
+      width: 90%;
+      max-width: 800px;
+      padding: 30px;
+      border-radius: 30px;
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(20px);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-bottom: 60px;
+      margin-top: 30px;
+      text-align: left;
+    }
 
-/* Fade-in animation */
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+    .intro-box img {
+      width: 40px;
+      height: 40px;
+      margin-bottom: 15px;
+      filter: invert(1);
+    }
 
-
-    @media (max-width: 768px) {
-      .dark-box h1, .intro-section {
-        text-align: center;
-      }
+    .intro-box .label {
+      font-size: 1rem;
+      line-height: 1.6;
     }
   </style>
 </head>
 <body>
 
-  <div class="dark-box">
-    <h1>CONTENT</h1>
-  </div>
+  <h1>CONTENT</h1>
 
   <div class="glass-grid">
     <div class="glass-button">
@@ -156,25 +127,22 @@
     </div>
     <div class="glass-button">
       <img src="trans.png" alt="Necklace" />
-      <div class="label">UNSEX</div>
+      <div class="label">UNISEX</div>
     </div>
   </div>
 
-  <!-- INTRODUCTION Heading -->
-  <div class="dark-box">
-    <h1>INTRODUCTION</h1>
+  <h1 class="intro-heading">INTRODUCTION</h1>
+
+  <div class="intro-box">
+    <img src="https://cdn-icons-png.flaticon.com/512/3303/3303893.png" alt="Intro Icon" />
+    <div class="label">
+      Welcome to <strong>ELYRA JEWELS</strong> – where timeless elegance meets modern sophistication.
+      <br /><br />
+      We specialize in unique, handcrafted jewelry for every identity – men, women, and unisex.
+      <br /><br />
+      Each piece is a symbol of luxury, culture, and personal expression. Explore collections designed to elevate your everyday and celebrate every moment.
+    </div>
   </div>
-
-<!-- INTRODUCTION Content -->
-<div class="intro-section fade-in">
-  Welcome to <strong>ELYRA JEWELS</strong> – where timeless elegance meets modern sophistication.
-  <br /><br />
-  We specialize in unique, handcrafted jewelry for every identity – men, women, and unisex.
-  <br /><br />
-  Each piece is a symbol of luxury, culture, and personal expression. Explore collections designed to elevate your everyday and celebrate every moment.
-</div>
-
 
 </body>
 </html>
-
