@@ -22,12 +22,6 @@
       min-height: 100vh;
     }
 
-    @media (max-width: 768px) {
-      body {
-        background-attachment: scroll;
-      }
-    }
-
     h1 {
       margin-top: 40px;
       font-size: 2rem;
@@ -62,15 +56,23 @@
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       animation: floatIn 0.8s ease forwards;
       opacity: 0;
+      cursor: pointer;
     }
-
-    .glass-button:nth-child(1) { animation-delay: 0.2s; }
-    .glass-button:nth-child(2) { animation-delay: 0.4s; }
-    .glass-button:nth-child(3) { animation-delay: 0.6s; }
 
     .glass-button:hover {
       transform: scale(1.07);
       box-shadow: 0 10px 40px rgba(255, 255, 255, 0.3);
+    }
+
+    @keyframes floatIn {
+      0% {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     .glass-button img {
@@ -107,33 +109,25 @@
         width: 90%;
       }
     }
-
-    @keyframes floatIn {
-      0% {
-        opacity: 0;
-        transform: translateY(40px);
-      }
-      100% {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
   </style>
 </head>
 <body>
   <h1>CONTENT</h1>
 
+  <!-- Audio element (hidden) -->
+  <audio id="hoverSound" src="hover.mp3" preload="auto"></audio>
+
   <div class="glass-grid">
     <div class="glass-button">
-      <img src="man.png" alt="Ring" />
+      <img src="man.png" alt="Man" />
       <div class="label">MAN</div>
     </div>
     <div class="glass-button">
-      <img src="woman.png" alt="Bracelet" />
+      <img src="woman.png" alt="Woman" />
       <div class="label">WOMAN</div>
     </div>
     <div class="glass-button">
-      <img src="trans.png" alt="Necklace" />
+      <img src="trans.png" alt="Unisex" />
       <div class="label">UNISEX</div>
     </div>
   </div>
@@ -149,5 +143,15 @@
       Each piece is a symbol of luxury, culture, and personal expression. Explore collections designed to elevate your everyday and celebrate every moment.
     </div>
   </div>
+
+  <script>
+    const sound = document.getElementById("hoverSound");
+    document.querySelectorAll(".glass-button").forEach(button => {
+      button.addEventListener("mouseenter", () => {
+        sound.currentTime = 0;
+        sound.play();
+      });
+    });
+  </script>
 </body>
 </html>
