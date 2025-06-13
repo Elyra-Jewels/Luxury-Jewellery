@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -40,26 +40,31 @@
       margin: 40px 0;
     }
 
-  .glass-button {
-  width: 160px;
-  height: 160px;
-  border-radius: 30px;
-  background: rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-  animation: glow 3s infinite ease-in-out;
-}
-.glass-button:hover {
-  transform: scale(1.08);
-  background: rgba(255, 255, 255, 0.15);
-  box-shadow: 0 0 25px rgba(255, 255, 255, 0.6);
-}
+    .glass-button {
+      width: 160px;
+      height: 160px;
+      border-radius: 30px;
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: floatIn 0.8s ease forwards, glow 3s infinite ease-in-out;
+      opacity: 0;
+    }
 
+    .glass-button:nth-child(1) { animation-delay: 0.2s; }
+    .glass-button:nth-child(2) { animation-delay: 0.4s; }
+    .glass-button:nth-child(3) { animation-delay: 0.6s; }
+
+    .glass-button:hover {
+      transform: scale(1.08);
+      background: rgba(255, 255, 255, 0.15);
+      box-shadow: 0 0 25px rgba(255, 255, 255, 0.6);
+    }
 
     .glass-button img,
     .product-card img {
@@ -95,6 +100,17 @@
       gap: 20px;
       justify-content: center;
       margin-bottom: 60px;
+    }
+
+    .product-card {
+      background: rgba(255, 255, 255, 0.08);
+      padding: 20px;
+      border-radius: 20px;
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      width: 180px;
+      text-align: center;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
     }
 
     .product-card img {
@@ -143,40 +159,28 @@
       }
     }
 
-   .glass-button {
-  width: 160px;
-  height: 160px;
-  border-radius: 30px;
-  background: rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(20px);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  animation: floatIn 0.8s ease forwards;
-  opacity: 0;
-}
+    @keyframes glow {
+      0% {
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+      }
+      50% {
+        box-shadow: 0 0 25px rgba(255, 255, 255, 0.4);
+      }
+      100% {
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+      }
+    }
 
-.glass-button:nth-child(1) { animation-delay: 0.2s; }
-.glass-button:nth-child(2) { animation-delay: 0.4s; }
-.glass-button:nth-child(3) { animation-delay: 0.6s; }
-   
-@keyframes glow {
-  0% {
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
-  }
-  50% {
-    box-shadow: 0 0 25px rgba(255, 255, 255, 0.4);
-  }
-  100% {
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
-  }
-}
-
-
+    @keyframes floatIn {
+      0% {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
   </style>
 </head>
 <body>
