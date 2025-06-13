@@ -5,9 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Elyraa Content</title>
   <style>
-    body {
+    html, body {
       margin: 0;
       padding: 0;
+      height: 100%;
       font-family: 'Segoe UI', sans-serif;
       background: #000000; /* DARK BACKGROUND */
       color: white;
@@ -76,19 +77,19 @@
 
   <div class="glass-grid">
     <div class="glass-button">
-      <img src="1.jpeg" alt="Introduction" />
+      <img src="https://via.placeholder.com/50/ffffff/000000?text=I" alt="Introduction" />
       <div class="label">Introduction</div>
     </div>
     <div class="glass-button">
-      <img src="1.jpeg" alt="Network" />
+      <img src="https://via.placeholder.com/50/ffffff/000000?text=S" alt="Structure" />
       <div class="label">Structure</div>
     </div>
     <div class="glass-button">
-      <img src="icons/shield.png" alt="Security" />
+      <img src="https://via.placeholder.com/50/ffffff/000000?text=Sec" alt="Security" />
       <div class="label">Security</div>
     </div>
     <div class="glass-button">
-      <img src="icons/chess.png" alt="Strategy" />
+      <img src="https://via.placeholder.com/50/ffffff/000000?text=Str" alt="Strategy" />
       <div class="label">Strategy</div>
     </div>
   </div>
