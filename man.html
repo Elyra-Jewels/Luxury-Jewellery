@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ELYRA JEWELS – MAN</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Segoe UI', sans-serif;
+      background-image: url('https://i.pinimg.com/736x/cc/b8/f6/ccb8f697d411bf3dc6bf99216f6016cb.jpg');
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-attachment: fixed;
+      background-size: cover;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    h1 {
+      margin-top: 40px;
+      font-size: 2rem;
+      letter-spacing: 3px;
+      background: rgba(0, 0, 0, 0.6);
+      padding: 10px 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+    }
+
+    .product-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      margin: 40px 0 60px;
+    }
+
+    .product-card {
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: 20px;
+      padding: 20px;
+      width: 180px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .product-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 25px rgba(255, 255, 255, 0.3);
+    }
+
+    .product-card img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 15px;
+      margin-bottom: 10px;
+    }
+
+    .product-name {
+      font-weight: bold;
+      text-align: center;
+      margin: 10px 0 5px;
+    }
+
+    .product-price {
+      font-size: 0.9rem;
+      color: #eee;
+      margin-bottom: 10px;
+    }
+
+    .inquiry-button {
+      padding: 6px 12px;
+      background: rgba(255,255,255,0.2);
+      border: none;
+      border-radius: 8px;
+      color: white;
+      cursor: pointer;
+      font-size: 0.9rem;
+      text-decoration: none;
+    }
+
+    .inquiry-button:hover {
+      background: rgba(255,255,255,0.4);
+    }
+
+    a.back-link {
+      color: #fff;
+      margin-bottom: 20px;
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .product-card {
+        width: 80%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <a href="index.html" class="back-link">← Back to Home</a>
+  <h1>MAN COLLECTION</h1>
+
+  <div class="product-grid">
+    <div class="product-card">
+      <img src="product1.jpg" alt="Gold Ring" />
+      <div class="product-name">Classic Gold Ring</div>
+      <div class="product-price">₹ 12,999</div>
+      <a href="https://wa.me/919000000000?text=I%20want%20to%20know%20about%20Classic%20Gold%20Ring" target="_blank" class="inquiry-button">Inquire</a>
+    </div>
+
+    <div class="product-card">
+      <img src="product2.jpg" alt="Men Bracelet" />
+      <div class="product-name">Bold Chain Bracelet</div>
+      <div class="product-price">₹ 9,999</div>
+      <a href="https://wa.me/919000000000?text=I%20want%20to%20know%20about%20Bold%20Chain%20Bracelet" target="_blank" class="inquiry-button">Inquire</a>
+    </div>
+
+    <div class="product-card">
+      <img src="product3.jpg" alt="Pendant" />
+      <div class="product-name">Minimal Pendant</div>
+      <div class="product-price">₹ 7,499</div>
+      <a href="https://wa.me/919000000000?text=I%20want%20to%20know%20about%20Minimal%20Pendant" target="_blank" class="inquiry-button">Inquire</a>
+    </div>
+  </div>
+
+</body>
+</html>
