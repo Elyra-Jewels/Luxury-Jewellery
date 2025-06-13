@@ -133,6 +133,36 @@
   background: rgba(255, 255, 255, 0.2);
   box-shadow: 0 0 25px rgba(255, 255, 255, 0.4);
 }
+.glass-button {
+  width: 160px;
+  height: 160px;
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  animation: glow 3s infinite ease-in-out;
+}
+.glass-button:hover {
+  transform: scale(1.08);
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.6);
+}
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.4);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+  }
+}
 
   </style>
   
