@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MAN RINGS – ELYRA JEWELS</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-image: url('https://i.pinimg.com/736x/cc/b8/f6/ccb8f697d411bf3dc6bf99216f6016cb.jpg');
+      background-size: cover;
+      background-attachment: fixed;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .header {
+      margin-top: 30px;
+      font-size: 2rem;
+      background: rgba(0, 0, 0, 0.6);
+      padding: 10px 20px;
+      border-radius: 10px;
+    }
+
+    .back-button {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      padding: 10px;
+      border-radius: 50%;
+      cursor: pointer;
+      text-decoration: none;
+      color: white;
+      font-size: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      transition: background 0.3s;
+    }
+
+    .back-button:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin: 50px 20px;
+      flex-wrap: wrap;
+      width: 100%;
+      max-width: 1200px;
+    }
+
+    .left-column, .right-column {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .product-image {
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(15px);
+      padding: 10px;
+      border-radius: 15px;
+      text-align: center;
+      transition: transform 0.3s;
+    }
+
+    .product-image img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .product-image:hover {
+      transform: scale(1.05);
+    }
+
+    .video-box {
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(15px);
+      padding: 15px;
+      border-radius: 15px;
+      width: 100%;
+    }
+
+    .video-box video {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        gap: 30px;
+      }
+
+      .product-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <a href="man.html" class="back-button" title="Back to MAN">←</a>
+  <div class="header">MAN - RINGS COLLECTION</div>
+
+  <div class="container">
+    <!-- Left: Product Images -->
+    <div class="left-column">
+      <div class="product-grid">
+        <div class="product-image">
+          <img src="ring1.jpg" alt="Ring 1">
+        </div>
+        <div class="product-image">
+          <img src="ring2.jpg" alt="Ring 2">
+        </div>
+        <div class="product-image">
+          <img src="ring3.jpg" alt="Ring 3">
+        </div>
+        <div class="product-image">
+          <img src="ring4.jpg" alt="Ring 4">
+        </div>
+      </div>
+    </div>
+
+    <!-- Right: Product Video -->
+    <div class="right-column">
+      <div class="video-box">
+        <video controls poster="poster.jpg">
+          <source src="product-video.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
