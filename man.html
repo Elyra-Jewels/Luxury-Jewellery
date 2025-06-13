@@ -5,14 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ELYRA JEWELS – MAN</title>
   <style>
-    body {
+    html, body {
       margin: 0;
       padding: 0;
+      height: 100%;
       font-family: 'Segoe UI', sans-serif;
       background-image: url('https://i.pinimg.com/736x/cc/b8/f6/ccb8f697d411bf3dc6bf99216f6016cb.jpg');
-      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
       background-attachment: fixed;
-      background-position: center;
+      background-size: cover;
       color: white;
       display: flex;
       flex-direction: column;
@@ -27,34 +29,62 @@
       background: rgba(0, 0, 0, 0.6);
       padding: 10px 20px;
       border-radius: 10px;
-    }
-
-    .category-buttons {
-      display: flex;
-      gap: 10px;
-      margin: 30px 0;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-
-    .category-buttons a {
-      padding: 10px 20px;
-      background: rgba(255, 255, 255, 0.2);
-      border-radius: 12px;
-      text-decoration: none;
-      color: white;
-      font-size: 1rem;
-      transition: background 0.3s ease;
-    }
-
-    .category-buttons a:hover {
-      background: rgba(255, 255, 255, 0.4);
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
     }
 
     a.back-link {
       color: #fff;
-      margin: 20px 0;
+      margin-top: 20px;
       text-decoration: underline;
+    }
+
+    .glass-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      margin: 30px 0;
+    }
+
+    .glass-button {
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 20px;
+      padding: 15px;
+      width: 120px;
+      height: 140px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-decoration: none;
+      color: white;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .glass-button img {
+      width: 60px;
+      height: 60px;
+      object-fit: contain;
+      margin-bottom: 10px;
+    }
+
+    .glass-button .label {
+      font-size: 0.9rem;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .glass-button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 25px rgba(255, 255, 255, 0.3);
+    }
+
+    @media (max-width: 768px) {
+      .glass-button {
+        width: 100px;
+        height: 130px;
+      }
     }
   </style>
 </head>
@@ -63,11 +93,19 @@
   <a href="index.html" class="back-link">← Back to Home</a>
   <h1>MAN COLLECTION</h1>
 
-  <!-- Redirect Buttons -->
-  <div class="category-buttons">
-    <a href="man-rings.html">Rings</a>
-    <a href="man-watches.html">Watches</a>
-    <a href="man-bracelets.html">Bracelets</a>
+  <div class="glass-grid">
+    <a href="man-rings.html" class="glass-button">
+      <img src="ring.png" alt="Ring" />
+      <div class="label">RING</div>
+    </a>
+    <a href="man-watches.html" class="glass-button">
+      <img src="watch.png" alt="Watch" />
+      <div class="label">WATCH</div>
+    </a>
+    <a href="man-bracelets.html" class="glass-button">
+      <img src="bracelet.png" alt="Bracelet" />
+      <div class="label">BRACELET</div>
+    </a>
   </div>
 
 </body>
