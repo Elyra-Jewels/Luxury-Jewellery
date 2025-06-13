@@ -81,38 +81,38 @@
       text-align: center;
     }
 
-    /* Left-aligned Introduction section */
-    .intro-wrapper {
-      width: 100%;
-      padding: 0 40px;
-    }
-
-    .intro-heading {
+    /* Unified dark box for heading + intro text */
+    .intro-container {
+      max-width: 800px;
+      background: rgba(0, 0, 0, 0.7);
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.08);
+      margin: 40px 20px;
       text-align: left;
-      margin-bottom: 10px;
     }
 
-    .intro-section {
-      max-width: 600px;
-      background: rgba(0, 0, 0, 0.6);
-      padding: 20px 30px;
-      border-radius: 15px;
-      box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+    .intro-container h1 {
+      margin-top: 0;
+      margin-bottom: 20px;
+      background: none;
+      padding: 0;
+      box-shadow: none;
+      font-size: 1.8rem;
+      letter-spacing: 2px;
+    }
+
+    .intro-container p {
       font-size: 1rem;
       line-height: 1.6;
-      text-align: left;
+      color: #f0f0f0;
     }
 
     @media (max-width: 768px) {
-      .intro-wrapper {
-        padding: 0 20px 60px;
+      .intro-container {
         text-align: center;
       }
-      .intro-heading {
-        text-align: center;
-      }
-      .intro-section {
-        width: 100%;
+      .intro-container h1 {
         text-align: center;
       }
     }
@@ -136,15 +136,16 @@
     </div>
   </div>
 
-  <div class="intro-wrapper">
-    <h1 class="intro-heading">INTRODUCTION</h1>
-    <div class="intro-section">
+  <!-- Combined Intro Section -->
+  <div class="intro-container">
+    <h1>INTRODUCTION</h1>
+    <p>
       Welcome to <strong>ELYRA JEWELS</strong> – where timeless elegance meets modern sophistication.
       <br /><br />
       We specialize in unique, handcrafted jewelry for every identity – men, women, and unisex. Each piece is a symbol of luxury, culture, and personal expression.
       <br /><br />
       Explore collections designed to elevate your everyday and celebrate every moment.
-    </div>
+    </p>
   </div>
 </body>
 </html>
