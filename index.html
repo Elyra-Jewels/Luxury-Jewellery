@@ -3,28 +3,36 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Elyraa Content</title>
+  <title>ELYRA JEWELS</title>
   <style>
     html, body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  font-family: 'Segoe UI', sans-serif;
-  background: url('https://i.pinimg.com/736x/cc/b8/f6/ccb8f697d411bf3dc6bf99216f6016cb.jpg') no-repeat center center fixed;
-  background-size: cover;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-height: 100vh;
-}
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Segoe UI', sans-serif;
+      background-image: url('https://i.pinimg.com/736x/cc/b8/f6/ccb8f697d411bf3dc6bf99216f6016cb.jpg');
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-attachment: fixed;
+      background-size: cover;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
 
+    @media (max-width: 768px) {
+      body {
+        background-attachment: scroll; /* mobile fix */
+      }
+    }
 
     h1 {
       margin-top: 50px;
       font-size: 2rem;
       letter-spacing: 3px;
-      background: #000000;
+      background: rgba(0, 0, 0, 0.6);
       padding: 10px 20px;
       border-radius: 10px;
       box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
