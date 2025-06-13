@@ -8,7 +8,6 @@
     html, body {
       margin: 0;
       padding: 0;
-      height: 100%;
       font-family: 'Segoe UI', sans-serif;
       background-image: url('https://i.pinimg.com/736x/cc/b8/f6/ccb8f697d411bf3dc6bf99216f6016cb.jpg');
       background-repeat: no-repeat;
@@ -46,19 +45,17 @@
       border-radius: 30px;
       background: rgba(255, 255, 255, 0.08);
       backdrop-filter: blur(20px);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
       border: 1px solid rgba(255, 255, 255, 0.18);
       display: flex;
       justify-content: center;
       align-items: center;
       flex-direction: column;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
-      animation: floatIn 0.8s ease forwards, glow 3s infinite ease-in-out;
+      animation: floatIn 0.8s ease forwards;
       opacity: 0;
+      cursor: pointer;
     }
-
-    .glass-button:nth-child(1) { animation-delay: 0.2s; }
-    .glass-button:nth-child(2) { animation-delay: 0.4s; }
-    .glass-button:nth-child(3) { animation-delay: 0.6s; }
 
     .glass-button:hover {
       transform: scale(1.08);
@@ -66,8 +63,18 @@
       box-shadow: 0 0 25px rgba(255, 255, 255, 0.6);
     }
 
-    .glass-button img,
-    .product-card img {
+    .glass-button:nth-child(1) { animation-delay: 0.2s; }
+    .glass-button:nth-child(2) { animation-delay: 0.4s; }
+    .glass-button:nth-child(3) { animation-delay: 0.6s; }
+
+    @keyframes floatIn {
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    .glass-button img {
       width: 60px;
       height: 60px;
       margin-bottom: 10px;
@@ -104,13 +111,18 @@
 
     .product-card {
       background: rgba(255, 255, 255, 0.08);
-      padding: 20px;
-      border-radius: 20px;
       backdrop-filter: blur(20px);
       border: 1px solid rgba(255, 255, 255, 0.18);
-      width: 180px;
+      border-radius: 15px;
+      padding: 15px;
+      width: 160px;
       text-align: center;
-      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease;
+    }
+
+    .product-card:hover {
+      transform: scale(1.05);
+      background: rgba(255, 255, 255, 0.12);
     }
 
     .product-card img {
@@ -143,6 +155,7 @@
       cursor: pointer;
       font-size: 0.9rem;
       text-decoration: none;
+      display: inline-block;
     }
 
     .inquiry-button:hover {
@@ -158,44 +171,21 @@
         width: 90%;
       }
     }
-
-    @keyframes glow {
-      0% {
-        box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
-      }
-      50% {
-        box-shadow: 0 0 25px rgba(255, 255, 255, 0.4);
-      }
-      100% {
-        box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
-      }
-    }
-
-    @keyframes floatIn {
-      0% {
-        opacity: 0;
-        transform: translateY(40px);
-      }
-      100% {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
   </style>
 </head>
 <body>
 
   <h1>PRODUCT</h1>
   <div class="glass-grid">
-    <div class="glass-button">
+    <div class="glass-button" onclick="filterProducts('man')">
       <img src="man.png" alt="Ring" />
       <div class="label">MAN</div>
     </div>
-    <div class="glass-button">
+    <div class="glass-button" onclick="filterProducts('woman')">
       <img src="woman.png" alt="Bracelet" />
       <div class="label">WOMAN</div>
     </div>
-    <div class="glass-button">
+    <div class="glass-button" onclick="filterProducts('unisex')">
       <img src="trans.png" alt="Necklace" />
       <div class="label">UNISEX</div>
     </div>
@@ -213,26 +203,39 @@
   </div>
 
   <h1>CATALOG</h1>
-  <div class="product-grid">
-    <div class="product-card">
+  <div class="product-grid" id="catalog">
+    <div class="product-card" data-category="man">
       <img src="product1.jpg" alt="Ring 1" />
       <div class="product-name">Classic Gold Ring</div>
       <div class="product-price">₹ 12,999</div>
       <a href="https://wa.me/919000000000?text=I%20want%20to%20know%20about%20Classic%20Gold%20Ring" target="_blank" class="inquiry-button">Inquire</a>
     </div>
-    <div class="product-card">
+    <div class="product-card" data-category="woman">
       <img src="product2.jpg" alt="Bracelet" />
       <div class="product-name">Elegant Bracelet</div>
       <div class="product-price">₹ 9,500</div>
       <a href="https://wa.me/919000000000?text=I%20want%20to%20know%20about%20Elegant%20Bracelet" target="_blank" class="inquiry-button">Inquire</a>
     </div>
-    <div class="product-card">
+    <div class="product-card" data-category="unisex">
       <img src="product3.jpg" alt="Necklace" />
       <div class="product-name">Pearl Necklace</div>
       <div class="product-price">₹ 18,000</div>
       <a href="https://wa.me/919000000000?text=I%20want%20to%20know%20about%20Pearl%20Necklace" target="_blank" class="inquiry-button">Inquire</a>
     </div>
   </div>
+
+  <script>
+    function filterProducts(category) {
+      const allCards = document.querySelectorAll('.product-card');
+      allCards.forEach(card => {
+        const match = card.dataset.category === category;
+        card.style.display = match ? 'block' : 'none';
+      });
+
+      // Scroll to catalog section
+      document.getElementById("catalog").scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
 
 </body>
 </html>
