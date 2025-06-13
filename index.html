@@ -8,6 +8,7 @@
     html, body {
       margin: 0;
       padding: 0;
+      height: 100%;
       font-family: 'Segoe UI', sans-serif;
       background-image: url('https://i.pinimg.com/736x/cc/b8/f6/ccb8f697d411bf3dc6bf99216f6016cb.jpg');
       background-repeat: no-repeat;
@@ -45,7 +46,6 @@
       border-radius: 30px;
       background: rgba(255, 255, 255, 0.08);
       backdrop-filter: blur(20px);
-      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
       border: 1px solid rgba(255, 255, 255, 0.18);
       display: flex;
       justify-content: center;
@@ -54,24 +54,13 @@
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       animation: floatIn 0.8s ease forwards;
       opacity: 0;
-      cursor: pointer;
+      text-decoration: none;
     }
 
     .glass-button:hover {
       transform: scale(1.08);
       background: rgba(255, 255, 255, 0.15);
       box-shadow: 0 0 25px rgba(255, 255, 255, 0.6);
-    }
-
-    .glass-button:nth-child(1) { animation-delay: 0.2s; }
-    .glass-button:nth-child(2) { animation-delay: 0.4s; }
-    .glass-button:nth-child(3) { animation-delay: 0.6s; }
-
-    @keyframes floatIn {
-      to {
-        transform: translateY(0);
-        opacity: 1;
-      }
     }
 
     .glass-button img {
@@ -101,73 +90,27 @@
       text-align: left;
     }
 
-    .product-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: center;
-      margin-bottom: 60px;
+    @keyframes floatIn {
+      0% {
+        transform: translateY(30px);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
     }
 
-    .product-card {
-      background: rgba(255, 255, 255, 0.08);
-      backdrop-filter: blur(20px);
-      border: 1px solid rgba(255, 255, 255, 0.18);
-      border-radius: 15px;
-      padding: 15px;
-      width: 160px;
-      text-align: center;
-      transition: transform 0.3s ease;
-    }
-
-    .product-card:hover {
-      transform: scale(1.05);
-      background: rgba(255, 255, 255, 0.12);
-    }
-
-    .product-card img {
-      width: 100px;
-      height: 100px;
-      object-fit: cover;
-      border-radius: 15px;
-      filter: none;
-    }
-
-    .product-name {
-      margin-top: 10px;
-      font-weight: bold;
-      text-align: center;
-    }
-
-    .product-price {
-      font-size: 0.9rem;
-      color: #eee;
-      margin: 5px 0;
-    }
-
-    .inquiry-button {
-      margin-top: 10px;
-      padding: 6px 12px;
-      background: rgba(255,255,255,0.2);
-      border: none;
-      border-radius: 8px;
-      color: white;
-      cursor: pointer;
-      font-size: 0.9rem;
-      text-decoration: none;
-      display: inline-block;
-    }
-
-    .inquiry-button:hover {
-      background: rgba(255,255,255,0.4);
-    }
+    .glass-button:nth-child(1) { animation-delay: 0.2s; }
+    .glass-button:nth-child(2) { animation-delay: 0.4s; }
+    .glass-button:nth-child(3) { animation-delay: 0.6s; }
 
     @media (max-width: 768px) {
       .intro-box {
         align-self: center;
         width: 90%;
       }
-      .glass-button, .product-card {
+      .glass-button {
         width: 90%;
       }
     }
@@ -175,20 +118,20 @@
 </head>
 <body>
 
-  <h1>PRODUCT</h1>
+  <h1>PRODUCT CATEGORIES</h1>
   <div class="glass-grid">
-    <div class="glass-button" onclick="filterProducts('man')">
+    <a href="man.html" class="glass-button">
       <img src="man.png" alt="Ring" />
       <div class="label">MAN</div>
-    </div>
-    <div class="glass-button" onclick="filterProducts('woman')">
+    </a>
+    <a href="woman.html" class="glass-button">
       <img src="woman.png" alt="Bracelet" />
       <div class="label">WOMAN</div>
-    </div>
-    <div class="glass-button" onclick="filterProducts('unisex')">
+    </a>
+    <a href="unisex.html" class="glass-button">
       <img src="trans.png" alt="Necklace" />
       <div class="label">UNISEX</div>
-    </div>
+    </a>
   </div>
 
   <h1>INTRODUCTION</h1>
@@ -201,41 +144,6 @@
       Each piece is a symbol of luxury, culture, and personal expression. Explore collections designed to elevate your everyday and celebrate every moment.
     </div>
   </div>
-
-  <h1>CATALOG</h1>
-  <div class="product-grid" id="catalog">
-    <div class="product-card" data-category="man">
-      <img src="product1.jpg" alt="Ring 1" />
-      <div class="product-name">Classic Gold Ring</div>
-      <div class="product-price">₹ 12,999</div>
-      <a href="https://wa.me/919000000000?text=I%20want%20to%20know%20about%20Classic%20Gold%20Ring" target="_blank" class="inquiry-button">Inquire</a>
-    </div>
-    <div class="product-card" data-category="woman">
-      <img src="product2.jpg" alt="Bracelet" />
-      <div class="product-name">Elegant Bracelet</div>
-      <div class="product-price">₹ 9,500</div>
-      <a href="https://wa.me/919000000000?text=I%20want%20to%20know%20about%20Elegant%20Bracelet" target="_blank" class="inquiry-button">Inquire</a>
-    </div>
-    <div class="product-card" data-category="unisex">
-      <img src="product3.jpg" alt="Necklace" />
-      <div class="product-name">Pearl Necklace</div>
-      <div class="product-price">₹ 18,000</div>
-      <a href="https://wa.me/919000000000?text=I%20want%20to%20know%20about%20Pearl%20Necklace" target="_blank" class="inquiry-button">Inquire</a>
-    </div>
-  </div>
-
-  <script>
-    function filterProducts(category) {
-      const allCards = document.querySelectorAll('.product-card');
-      allCards.forEach(card => {
-        const match = card.dataset.category === category;
-        card.style.display = match ? 'block' : 'none';
-      });
-
-      // Scroll to catalog section
-      document.getElementById("catalog").scrollIntoView({ behavior: 'smooth' });
-    }
-  </script>
 
 </body>
 </html>
