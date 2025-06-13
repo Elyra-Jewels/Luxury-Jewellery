@@ -3,21 +3,23 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ELYRA JEWELS – WOMAN</title>
+  <title>ELYRA JEWELS – MAN</title>
   <style>
-    /* Same styles as man.html */
     html, body {
       margin: 0;
       padding: 0;
       height: 100%;
       font-family: 'Segoe UI', sans-serif;
       background-image: url('https://i.pinimg.com/736x/cc/b8/f6/ccb8f697d411bf3dc6bf99216f6016cb.jpg');
-      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
       background-attachment: fixed;
+      background-size: cover;
       color: white;
       display: flex;
       flex-direction: column;
       align-items: center;
+      min-height: 100vh;
     }
 
     h1 {
@@ -27,78 +29,61 @@
       background: rgba(0, 0, 0, 0.6);
       padding: 10px 20px;
       border-radius: 10px;
-    }
-
-    .product-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: center;
-      margin: 40px 0 60px;
-    }
-
-    .product-card {
-      background: rgba(255, 255, 255, 0.08);
-      backdrop-filter: blur(20px);
-      border: 1px solid rgba(255, 255, 255, 0.18);
-      border-radius: 20px;
-      padding: 20px;
-      width: 180px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .product-card:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 25px rgba(255, 255, 255, 0.3);
-    }
-
-    .product-card img {
-      width: 100px;
-      height: 100px;
-      object-fit: cover;
-      border-radius: 15px;
-      margin-bottom: 10px;
-    }
-
-    .product-name {
-      font-weight: bold;
-      text-align: center;
-      margin: 10px 0 5px;
-    }
-
-    .product-price {
-      font-size: 0.9rem;
-      color: #eee;
-      margin-bottom: 10px;
-    }
-
-    .inquiry-button {
-      padding: 6px 12px;
-      background: rgba(255,255,255,0.2);
-      border: none;
-      border-radius: 8px;
-      color: white;
-      cursor: pointer;
-      font-size: 0.9rem;
-      text-decoration: none;
-    }
-
-    .inquiry-button:hover {
-      background: rgba(255,255,255,0.4);
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
     }
 
     a.back-link {
       color: #fff;
-      margin-bottom: 20px;
+      margin-top: 20px;
       text-decoration: underline;
     }
 
+    .glass-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      margin: 30px 0;
+    }
+
+    .glass-button {
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 20px;
+      padding: 15px;
+      width: 120px;
+      height: 140px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-decoration: none;
+      color: white;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .glass-button img {
+      width: 60px;
+      height: 60px;
+      object-fit: contain;
+      margin-bottom: 10px;
+    }
+
+    .glass-button .label {
+      font-size: 0.9rem;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .glass-button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 25px rgba(255, 255, 255, 0.3);
+    }
+
     @media (max-width: 768px) {
-      .product-card {
-        width: 80%;
+      .glass-button {
+        width: 100px;
+        height: 130px;
       }
     }
   </style>
@@ -108,27 +93,19 @@
   <a href="index.html" class="back-link">← Back to Home</a>
   <h1>WOMAN COLLECTION</h1>
 
-  <div class="product-grid">
-    <div class="product-card">
-      <img src="product4.jpg" alt="Earrings" />
-      <div class="product-name">Diamond Earrings</div>
-      <div class="product-price">₹ 15,499</div>
-      <a href="https://wa.me/919000000000?text=I%20want%20to%20know%20about%20Diamond%20Earrings" target="_blank" class="inquiry-button">Inquire</a>
-    </div>
-
-    <div class="product-card">
-      <img src="product5.jpg" alt="Bracelet" />
-      <div class="product-name">Elegant Rose Bracelet</div>
-      <div class="product-price">₹ 10,200</div>
-      <a href="https://wa.me/919000000000?text=I%20want%20to%20know%20about%20Elegant%20Rose%20Bracelet" target="_blank" class="inquiry-button">Inquire</a>
-    </div>
-
-    <div class="product-card">
-      <img src="product6.jpg" alt="Necklace" />
-      <div class="product-name">Gold Pearl Necklace</div>
-      <div class="product-price">₹ 19,800</div>
-      <a href="https://wa.me/919000000000?text=I%20want%20to%20know%20about%20Gold%20Pearl%20Necklace" target="_blank" class="inquiry-button">Inquire</a>
-    </div>
+  <div class="glass-grid">
+    <a href="woman-rings.html" class="glass-button">
+      <img src="ring.png" alt="Ring" />
+      <div class="label">RING</div>
+    </a>
+    <a href="woman-watches.html" class="glass-button">
+      <img src="watch.png" alt="Watch" />
+      <div class="label">WATCH</div>
+    </a>
+    <a href="woman-bracelets.html" class="glass-button">
+      <img src="bracelet.png" alt="Bracelet" />
+      <div class="label">BRACELET</div>
+    </a>
   </div>
 
 </body>
