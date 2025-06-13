@@ -59,15 +59,18 @@
       justify-content: center;
       align-items: center;
       flex-direction: column;
-      transition: transform 0.3s ease;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: floatIn 0.8s ease forwards;
+      opacity: 0;
     }
 
-    transition: transform 0.3s ease;
-
+    .glass-button:nth-child(1) { animation-delay: 0.2s; }
+    .glass-button:nth-child(2) { animation-delay: 0.4s; }
+    .glass-button:nth-child(3) { animation-delay: 0.6s; }
 
     .glass-button:hover {
-      transform: scale(1.05);
-      background: rgba(255, 255, 255, 0.15);
+      transform: scale(1.07);
+      box-shadow: 0 10px 40px rgba(255, 255, 255, 0.3);
     }
 
     .glass-button img {
@@ -91,7 +94,7 @@
       padding: 20px;
       margin: 20px;
       max-width: 600px;
-      align-self: flex-start; /* LEFT align */
+      align-self: flex-start;
       border-radius: 20px;
       box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
       text-align: left;
@@ -105,70 +108,20 @@
       }
     }
 
-    /* Animation on load */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.glass-button {
-  animation: fadeInUp 0.6s ease forwards;
-  opacity: 0;
-}
-
-/* Staggered delay for button animations */
-.glass-button:nth-child(1) { animation-delay: 0.2s; }
-.glass-button:nth-child(2) { animation-delay: 0.4s; }
-.glass-button:nth-child(3) { animation-delay: 0.6s; }
-
-/* Hover animation */
-.glass-button:hover {
-  transform: scale(1.1);
-  background: rgba(255, 255, 255, 0.2);
-  box-shadow: 0 0 25px rgba(255, 255, 255, 0.4);
-}
-.glass-button {
-  width: 160px;
-  height: 160px;
-  border-radius: 30px;
-  background: rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-  animation: glow 3s infinite ease-in-out;
-}
-.glass-button:hover {
-  transform: scale(1.08);
-  background: rgba(255, 255, 255, 0.15);
-  box-shadow: 0 0 25px rgba(255, 255, 255, 0.6);
-}
-@keyframes glow {
-  0% {
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
-  }
-  50% {
-    box-shadow: 0 0 25px rgba(255, 255, 255, 0.4);
-  }
-  100% {
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
-  }
-}
-
+    @keyframes floatIn {
+      0% {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
   </style>
-  
 </head>
 <body>
-  <h1>PRODUCTES</h1>
+  <h1>CONTENT</h1>
 
   <div class="glass-grid">
     <div class="glass-button">
@@ -185,7 +138,7 @@
     </div>
   </div>
 
-  <h1>INTRODUCTION11</h1>
+  <h1>INTRODUCTION</h1>
 
   <div class="intro-box">
     <div class="label">
