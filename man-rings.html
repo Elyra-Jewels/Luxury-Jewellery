@@ -159,45 +159,46 @@
   <div class="header">MAN - RINGS COLLECTION</div>
 
   <div class="container">
-    <!-- Left: Product Images -->
     <div class="left-column">
       <div class="product-grid">
         <!-- Product 1 -->
-        <div class="product-image" onclick="toggleButtons(this)">
+        <div class="product-image" onclick="toggleButtons(this, 'Ring 1')">
           <img src="m1.jpeg" alt="Ring 1">
           <div class="inquire-buttons">
-            <a href="https://wa.me/919081624492" target="_blank" class="whatsapp-btn">WhatsApp</a>
+            <a href="#" target="_blank" class="whatsapp-btn">WhatsApp</a>
             <a href="https://instagram.com/elyraa.designs" target="_blank" class="instagram-btn">Instagram</a>
           </div>
         </div>
+
         <!-- Product 2 -->
-        <div class="product-image" onclick="toggleButtons(this)">
+        <div class="product-image" onclick="toggleButtons(this, 'Ring 2')">
           <img src="m2.jpeg" alt="Ring 2">
           <div class="inquire-buttons">
-            <a href="https://wa.me/919081624492" target="_blank" class="whatsapp-btn">WhatsApp</a>
+            <a href="#" target="_blank" class="whatsapp-btn">WhatsApp</a>
             <a href="https://instagram.com/elyraa.designs" target="_blank" class="instagram-btn">Instagram</a>
           </div>
         </div>
+
         <!-- Product 3 -->
-        <div class="product-image" onclick="toggleButtons(this)">
+        <div class="product-image" onclick="toggleButtons(this, 'Ring 3')">
           <img src="m3.jpeg" alt="Ring 3">
           <div class="inquire-buttons">
-            <a href="https://wa.me/919081624492" target="_blank" class="whatsapp-btn">WhatsApp</a>
+            <a href="#" target="_blank" class="whatsapp-btn">WhatsApp</a>
             <a href="https://instagram.com/elyraa.designs" target="_blank" class="instagram-btn">Instagram</a>
           </div>
         </div>
+
         <!-- Product 4 -->
-        <div class="product-image" onclick="toggleButtons(this)">
+        <div class="product-image" onclick="toggleButtons(this, 'Ring 4')">
           <img src="m4.jpeg" alt="Ring 4">
           <div class="inquire-buttons">
-            <a href="https://wa.me/919081624492" target="_blank" class="whatsapp-btn">WhatsApp</a>
+            <a href="#" target="_blank" class="whatsapp-btn">WhatsApp</a>
             <a href="https://instagram.com/elyraa.designs" target="_blank" class="instagram-btn">Instagram</a>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- Right: Product Video -->
     <div class="right-column">
       <div class="video-box">
         <video controls poster="poster.jpg">
@@ -209,9 +210,15 @@
   </div>
 
   <script>
-    function toggleButtons(element) {
+    function toggleButtons(element, productName) {
       element.classList.toggle('show-buttons');
+
+      const whatsappLink = element.querySelector('.whatsapp-btn');
+      const message = `Hi! I am interested in ${productName}. Can you tell me more about it?`;
+      const encodedMessage = encodeURIComponent(message);
+      whatsappLink.href = `https://wa.me/919081624492?text=${encodedMessage}`;
     }
   </script>
+
 </body>
 </html>
