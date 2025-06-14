@@ -151,6 +151,33 @@
         grid-template-columns: 1fr 1fr;
       }
     }
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 10px;
+  }
+
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .left-column, .right-column {
+    width: 100%;
+    min-width: unset;
+  }
+
+  .product-image {
+    padding: 8px;
+  }
+
+  .video-box {
+    padding: 10px;
+  }
+}
+
+    
   </style>
 </head>
 <body>
