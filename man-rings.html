@@ -18,33 +18,43 @@
       min-height: 100vh;
     }
 
-    .header {
-      margin-top: 30px;
-      font-size: 2rem;
-      background: rgba(0, 0, 0, 0.6);
-      padding: 10px 20px;
-      border-radius: 10px;
-    }
+   .header {
+  margin: 80px 20px 20px;
+  font-size: 2rem;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 10px 20px;
+  border-radius: 10px;
+  text-align: center;
+}
 
-    .back-button {
-      position: absolute;
-      top: 20px;
-      left: 20px;
-      background: rgba(255, 255, 255, 0.08);
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      padding: 10px;
-      border-radius: 50%;
-      cursor: pointer;
-      text-decoration: none;
-      color: white;
-      font-size: 18px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 40px;
-      height: 40px;
-      transition: background 0.3s;
-    }
+.back-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  transition: background 0.3s;
+  z-index: 10;
+}
+
+@media (max-width: 768px) {
+  .header {
+    margin-top: 80px; /* ensure space for back button */
+    font-size: 1.5rem;
+  }
+}
+
 
     .back-button:hover {
       background: rgba(255, 255, 255, 0.2);
